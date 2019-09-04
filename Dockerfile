@@ -8,6 +8,7 @@ RUN apk update && \
     apk add python && \
     rm -rf /var/cache/apk/*
 
+RUN npm config set unsafe-perm true
 RUN npm install -g gatsby
 
 RUN mkdir -p /site
