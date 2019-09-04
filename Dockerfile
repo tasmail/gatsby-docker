@@ -3,7 +3,7 @@ FROM node:10.6-alpine
 EXPOSE 8000
 
 RUN apk update && \
-    apk add autoconf fftw-dev gcc g++ make libc6-compat && \
+    apk add autoconf automake fftw-dev gcc g++ make libc6-compat && \
     apk add git && \
     apk add python && \
     rm -rf /var/cache/apk/*
