@@ -35,7 +35,7 @@ elif  [ "$1" == "stage" ]
 then
   rm -rf $GATSBY_DIR/public
   gatsby build
-  gatsby serve --port 8000
+  gatsby serve --host 0.0.0.0 --port 8000
 
 else
   exec $@
