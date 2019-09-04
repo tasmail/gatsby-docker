@@ -1,4 +1,4 @@
-FROM node:9.5-alpine
+FROM node:10.6-alpine
 
 EXPOSE 8000
 
@@ -8,7 +8,7 @@ RUN apk update && \
     apk add python && \
     rm -rf /var/cache/apk/*
 
-RUN npm install --global gatsby --no-optional gatsby
+RUN npm install -g gatsby
 
 RUN mkdir -p /site
 WORKDIR /site
